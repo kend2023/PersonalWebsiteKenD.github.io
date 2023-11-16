@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ken D.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allerta&display=swap">
+</head>
+     <style>
+       body {
+         background-color: #000;
+         color: #fff; /* Text color */
+       }
+
+       .container { 
+         max-width: 100%; /* Adjust the maximum width as needed */
+         margin: 1; /* Center the container horizontally */
+         padding: 20px; /* Add some padding for better readability */
+       }
+
+       .column {
+         background-color: #222;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+         overflow: hidden;
+         margin: 10px;
+         text-align: center;
+         padding: 20px;
+         transition: transform 0.3s ease-in-out;
+       }
+      
+       .column:hover {
+         transform: scale(1.05);
+       }
+
+       .row {
+         background-color: #333;
+         border-radius: 8px;
+         overflow: hidden;
+         padding: 10px;
+         justify-content: center;
+         height: auto; /* Set your desired height value */
+         transition: transform 1.3s ease-in-out;
+       }
+
+       .row1 {
+         background-color: #333;
+         border-radius: 8px;
+         overflow: hidden;
+         padding: 10px;
+         height: auto; /* Set your desired height value */
+         transition: transform 1.3s ease-in-out;
+       }
+
+       .row2 {
+         background-color: #333;
+         border-radius: 8px;
+         overflow: hidden;
+         padding: 10px;
+         height: auto; /* Set your desired height value */
+         transition: transform 1.3s ease-in-out;
+         transition: opacity 0.5s ease-in-out;
+       }
+
+        /* Style the header/navbar */
+       header {
+         background-color: #222; /* Dark gray background */
+         text-decoration: none;
+       }
+
+       a.navbar-brand {
+         font-family: 'Times New Roman', serif;
+         font-size: 24px;
+         font-weight: bold;
+         text-decoration: none;
+         color:;
+       }
+
+       a.navbar-brand:hover {
+         color: #4CAF50; /* Change color on hover if desired */
+       }
+
+       .navbar-brand:hover {
+         color: #45a049; /* Change color on hover if desired */
+       }
+   
+       .navbar-nav .nav-link {
+         color: rgb(255, 255, 255); /* White link text color */
+       }
+
+       /* Style the jumbotron on the home section */
+       .jumbotron {
+         background-image: url('background.jpg');
+         background-size: 100% 545px; /* Adjust the width and height as needed */
+         background-repeat: no-repeat;
+       }
+
+       .jumbotron h2, .jumbotron p {
+         color: #fff; /* White text color */
+       }
+
+       .animated-border {
+         max-width: 30%;
+         height: auto;
+         border: 2px solid black;
+         border-radius: 50%;
+         box-shadow: 0 0 3em white;
+         transition: border-color 1s ease-in-out; /* Add a smooth transition effect */
+       }
+
+       .animated-border:hover {
+         border-radius: 50%;
+         border-color: white; /* Change the border color on hover */
+         box-shadow: 0 0 4em white;
+       }
+ 
+       .welcome-heading {
+         font-family: 'Allerta', sans-serif;
+         font-size: 36px;
+         color: #f2e8e8;
+       }
+
+       .lead {
+         font-family: 'Allerta', sans-serif;
+         font-size: 24px;
+         color: #f2e8e8;
+       }
+
+       /* Style the "Learn More" button */
+       .jumbotron a.btn-primary {
+         background-color: #007BFF; /* Blue button color */
+         border: none;
+       }
+
+       /* Style the about section */
+       #about {
+         background-color: #222; /* Slightly darker gray background */
+         padding: 50px; /* Add some padding */
+       }
+
+       #about h2 {
+         color: #fff; /* White text color */
+       }
+ 
+       .accordion {
+         background-color: #333;
+         color: white;
+         cursor: pointer;
+         padding: 18px;
+         width: 100%;
+         text-align: left;
+         border-radius: 8px;
+         outline: none;
+         transition: 0.4s;
+       }
+
+       .panel {
+         display: none;
+         padding: 0 18px;
+         border-radius: 8px;
+         background-color: #333;
+         overflow: hidden;
+         height:100%;
+         transition: max-height 0.2s ease-out;
+       }
+
+       .accordion.active, .accordion:hover {
+         background-color: #555;
+       }
+
+       .panel.show {
+         display: block;
+         max-height: 500px; /* You can adjust this value based on your content */
+       }
+
+       /* Style the services section */
+       #hobbies {
+         background-color: #222; /* Slightly darker gray background */
+         padding: 50px; /* Add some padding */
+       }
+
+       #hobbies h2, #services ul {
+         color: #fff; /* White text color */
+       }
+       
+       .card {
+         display: flex;
+         justify-content: space-around;
+         width: 100%;
+         background-color: #333;
+       }
+
+       img {
+         width: 500px;
+         height: auto;
+         border-radius: 8px;
+       }
+     
+       h2 {
+         font-family: 'Bebas Neue', sans-serif;
+         font-size: 36px;
+         letter-spacing: 2px;
+         margin-top: 10px;
+         color:black;
+       }
+
+       p {
+         font-family: 'Bebas Neue', sans-serif;
+         color: #555;
+       }
+
+       /* Style the services section */
+       #favorite {
+         background-color: #222;
+         padding: 50px;
+       }
+
+       #favorite h2, #services ul {
+         color: #fff;
+       }
+
+     .favorite-carousel {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .carousel {
+       position: relative;
+       width: 500px;
+       overflow: hidden;
+     }
+
+     .carousel-inner {
+       display: flex;
+       transition: transform 0.5s;
+     }
+
+     .carousel-item {
+       min-width: 100%;
+       box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       opacity: 0;
+       cursor: pointer;
+       transition: opacity 0.5s ease-in-out;
+     }
+
+     .carousel-item.active {
+       opacity: 1;
+     }
+
+     img {
+       width: 100%;
+       height: auto;
+       max-height: 300px;
+       margin: 0 auto;
+     }
+
+     .carousel-title {
+       margin-top: 10px;
+       color: white;
+       font-size:20px;
+     }
+
+     .carousel-btn {
+       position: absolute;
+       top: 60%;
+       width: 50px;
+       height: 50px;
+       background-color: #333;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+       opacity: 30%;
+     }
+
+     .prev-btn {
+       left: 0;
+     }
+
+     .next-btn {
+       right: 0;
+     }
+
+     .fade-in {
+       animation: fadeIn 0.5s ease-in-out;
+     }
+
+     @keyframes fadeIn {
+       from { opacity: 0; }
+       to { opacity: 1; }       
+     }
+
+     /* Style the contact section */
+     #contact {
+       background-color: #222; /* Slightly darker gray background */
+       padding: 50px; /* Add some padding */
+     }
+
+     #contact h2, #contact form, #contact p {
+       color: #fff; /* White text color */
+     }
+
+     /* Style the footer */
+     footer {
+        background-color: #222
+       color: #fff; /* White text color */
+       padding: 15px 0;
+     }
+
+     </style>
+  <body>
+    
+    <header class="navbar navbar-expand-lg navbar-light bg-center">
+      <a class="navbar-brand text-light" href="#">Ken D.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-light" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#hobbies">Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#favorite">Favorite</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <section id="home" class="jumbotron text-center" style="position: relative;">
+      <h2 class="welcome-heading">Welcome to My Website</h2>
+      <p class="lead">I'm Jhon Kenneth Sevilla, a BSIT Student.</p>
+      <img src="kenneth.jpg" alt="Kenneth" class="img-fluid mx-auto d-block animated-border">
+      <a class="btn btn-dark" href="#about" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">Learn More</a>
+    </section>  
+
+    <section id="about" class="container">
+      <div class="row1">
+        <button class="accordion">About Me</button>
+           <div class="panel">
+            <p>Hello there! I'm Jhon Kenneth Sevilla, and here's a bit about me:</p>
+            <p>I'm passionate about exploring the virtual realms through online gaming, 
+              finding joy in strategic battles in games like Mobile Legends, Clash of Clans, and the fast-paced world of Call of Duty: Mobile.
+              When I'm not immersed in the gaming world, I indulge in the captivating stories of anime. Some of my favorite series include "Attack on Titan,"
+              "One Piece," "Demon Slayer," "Jujutsu Kaisen," and "Tokyo Revengers," each leaving a lasting impression with unique characters and compelling narratives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+   <section id="hobbies" class="container">
+       <div class="row">
+         <div class="col-lg-6">
+           <h2>My Hobbies</h2>
+           <p>Explore the thrilling world of online gaming with my favorite titles. Immerse yourself in strategic battles and team-based action with games like Mobile Legends, Clash of Clans, and Call of Duty: Mobile. Experience the excitement of multiplayer gaming, where strategy and skill come together for an unforgettable gaming experience.</p>
+           <div class="card">
+
+             <div class="column">
+               <img src="ml.jpg" alt="Image 1">
+               <h2>Mobile Legends</h2>
+               <p>Mobile Legends is a multiplayer online battle arena (MOBA) game where players engage in strategic battles with a variety of heroes.</p>
+             </div>
+             
+             <div class="column">
+              <img src="coc.jpg" alt="Image 2">
+              <h2>Clash Of Clans</h2>
+              <p>Clash of Clans is a strategy game where players build and upgrade their base, train armies, and attack other players to earn resources.</p>
+            </div>
+            
+            <div class="column">
+              <img src="codm.jpg" alt="Image 3">
+              <h2>Call Of Duty: Mobile</h2>
+              <p>Call of Duty: Mobile brings the iconic FPS franchise to mobile devices, offering intense multiplayer battles and a variety of game modes.</p>
+            </div>
+          </div>
+        </div>
+       </div>
+      </section>
+      
+      <section id="favorite" class="container">
+        <div class="row2">
+          <div class="col-lg-12">
+            <h2>My Favorite Anime</h2>
+                  <div class="favorite-carousel">
+                    <div class="carousel">
+                      <button type="button" class="carousel-btn prev-btn" onclick="favoritePrevImage()">⟨</button>
+                      <div class="carousel-inner fade-in" onclick="favoriteSelectImage(event)">
+                        <div class="carousel-item active" data-index="0">
+                          <img src="aot.jpg" alt="Favorite Show 1">
+                           <div class="carousel-title">
+                            <h3>Attack on Titan</h3>
+                            <p>Witness the struggle for survival as humanity battles giant humanoid creatures known as Titans. "Attack on Titan" delivers intense action, complex characters, and a gripping storyline.</p>
+                           </div>
+                        </div>
+                         <div class="carousel-item" data-index="1">
+                          <img src="op.jpg" alt="Favorite Show 2">
+                          <div class="carousel-title">
+                            <h3>One Piece</h3>
+                             <p>Embark on a grand adventure with Monkey D. Luffy and his pirate crew in search of the legendary treasure, One Piece. This long-running series combines humor, friendship, and epic battles.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item" data-index="2">
+                         <img src="ds.jpg" alt="Favorite Show 3">
+                         <div class="carousel-title">
+                           <h3>Demon Slayer</h3>
+                             <p>Join Tanjiro Kamado in his quest to rid the world of demons and avenge his family. "Demon Slayer" features breathtaking animation and a poignant tale of courage and determination.</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item" data-index="3">
+                         <img src="jjk.jpg" alt="Favorite Show 4">
+                         <div class="carousel-title">
+                           <h3>Jujutsu Kaisen</h3>
+                             <p>Experience supernatural battles and dark curses as Yuji Itadori enters the world of jujutsu sorcery. "Jujutsu Kaisen" offers a perfect blend of action and humor.</p>
+                         </div>
+                        </div>
+                        <div class="carousel-item" data-index="4">
+                          <img src="tr.jpg" alt="Favorite Show 5">
+                          <div class="carousel-title">
+                           <h3>Tokyo Revengers</h3>
+                             <p>Take a journey through time with Takemichi Hanagaki as he tries to change the future and save his friends. "Tokyo Revengers" combines gang conflicts and time-travel elements.</p>
+                         </div>
+                       </div>
+                       </div>
+                         <button type="button" class="carousel-btn next-btn" onclick="favoriteNextImage()">⟩</button>
+                        </div>
+              </div>
+            </div>
+         </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="row">
+            <div class="col-lg-6">
+             <h2>Contact Me:</h2>
+              <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                 <div class="form-group col-sm-12">
+                  <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group col-sm-12">
+                  <input type="email" class="form-control" placeholder="Enter Email" requried>
+                </div>
+                <div class="form-group col-sm-12">
+                  <textarea name="comment" id="comment" rows="6" class="form-control" placeholder="Write Something"></textarea>
+                </div>
+                 <div class="form-group col-sm-15 mt-3">
+                  <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                </div>
+              </div>
+            </form>
+
+              <p>Email: jhonkennethsevilla@gmail.com <i class="fas fa-envelope"></i></p>
+              <p>Phone: +639914477128 <i class="fas fa-phone"></i></p>
+              <p>Social Media: 
+                <a href="https://www.facebook.com/profile.php?id=100009953324271&mibextid=ZbWKwL"><i class="fab fa-facebook"></i> Facebook</a>, 
+                <a href="https://x.com/Kenneth200116?t=tKN_U7FA2Sg6_YwjjxZ65g&s=09"><i class="fab fa-twitter"></i> Twitter</a>, 
+                <a href="https://www.instagram.com/kenne.th1216"><i class="fab fa-instagram"></i> Instagram</a>                
+              </p>
+           </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2023 Ken D.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+<script>
+    // JavaScript to the accordion
+    const accordion = document.querySelector('.accordion');
+    const panel = document.querySelector('.panel');
+
+    accordion.addEventListener('click', function () {
+        this.classList.toggle('active');
+        panel.classList.toggle('show');
+    });
+     
+    // JavaScript to the carousel
+    const favoriteCarouselInner = document.querySelector('.favorite-carousel .carousel-inner');
+    const favoriteCarouselItems = document.querySelectorAll('.favorite-carousel .carousel-item');
+    let favoriteCurrentIndex = 0;
+    let favoriteIntervalId;
+
+    function favoriteShowImage(index) {
+      const translateValue = -index * 0 + '%';
+      favoriteCarouselInner.style.transform = 'translateX(' + translateValue + ')';
+
+      favoriteCarouselItems.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+      });
+    }
+
+    function favoriteNextImage() {
+      favoriteCurrentIndex = (favoriteCurrentIndex + 1) % favoriteCarouselItems.length;
+      favoriteShowImage(favoriteCurrentIndex);
+    }
+
+    function favoritePrevImage() {
+      favoriteCurrentIndex = (favoriteCurrentIndex - 1 + favoriteCarouselItems.length) % favoriteCarouselItems.length;
+      favoriteShowImage(favoriteCurrentIndex);
+    }
+
+    function favoriteSelectImage(event) {
+      clearInterval(favoriteIntervalId);
+
+      const clickedIndex = [...event.target.parentNode.children].indexOf(event.target);
+      if (clickedIndex !== -1) {
+        favoriteCurrentIndex = clickedIndex;
+        favoriteShowImage(favoriteCurrentIndex);
+      }
+
+      favoriteIntervalId = setInterval(favoriteNextImage, 30000);
+    }
+
+    favoriteIntervalId = setInterval(favoriteNextImage, 30000);
+</script>
+</body>
+</html>
